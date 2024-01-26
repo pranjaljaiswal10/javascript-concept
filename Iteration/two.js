@@ -13,7 +13,7 @@ const factorTwo=myNums.filter((item)=>{
 
 console.log(factorTwo);
 
-const newNums=[]
+const newNums=[];
 
 myNums.forEach((item)=>{
     if(item%3===0)

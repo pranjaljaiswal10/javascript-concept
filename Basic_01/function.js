@@ -1,3 +1,4 @@
+//default Parameter
 function loginUserMessage(username="sam"){
   if(!username){
     console.log("Please enter a username")
