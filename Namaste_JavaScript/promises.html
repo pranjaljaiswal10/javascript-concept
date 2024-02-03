@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+     <script>
+        //calling public api to fetch data
+const  URL="https://api.github.com/users/pranjaljaiswal10";
+const users=fetch(URL)  //=>promises
+
+console.log(users); //Promises{pending}
+//promises object has three thing=>'prototype','promiseState','promiseResult'
+//promisesState will tell in which state the promises is currently, 
+//promisesResult will store data returnerd from API call
+
+users.then(function (data){
+ console.log(data);
+})
+.catch((error)=>{
+    console.log(error);
+})
+//It guarantees that it could be resolved only once,either could be 'success' or 'rejected'
+/**
+A Promises is in one of these states:
+
+   pending:intitial state, neither fulfilled nor rejected
+   fulfilled:operation completed successfully
+   rejected:operation failed
+*/    
+    </script>
+</body>
+</html>
+

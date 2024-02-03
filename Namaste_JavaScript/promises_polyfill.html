@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      const cart = ["shoes", "pants", "kurta"];
+
+      // Consumer part of promise
+      const promise = createOrderCart(cart); //=> OrderId
+
+  console.log(promise)
+
+      promise.then(function (orderId) {
+        console.log(orderId)
+      }).catch((error)=>{
+        console.log(error)
+      }).finally(()=>{
+        console.log("promisses is settled");
+      })
+    
+
+      //Producer part pf promise
+      function createOrderCart(cart) {
+        //JS provide a Promises constuctor througth which we create promises
+
+        //It accepts a callback function withb two parameter 'resolve' & 'reject'
+   /*
+  What are 'resolve' and 'reject'?
+  These are the fn which is provided by js to handle the 'success' and 'failure' of fn call
+   */
+
+        const promise = new Promise(function (resolve, reject) {
+            if(!validateCart(cart))
+            {
+                const err=new Error("Cart is not valid")
+             reject(err)
+            }
+            const orderId="1234" //get this data by calling the db(Assumption)
+            if(orderId)
+            {
+                resolve("1234")
+            }
+            function validateCart(cart){
+                return false
+                
+                ;
+            }
+        });
+        return promise;
+      }
+    </script>
+  </body>
+</html>

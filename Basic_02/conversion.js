@@ -14,6 +14,8 @@ console.log(nameinNumber, typeof nameinNumber);
 //4+[2]=>"42"
 //4*[1,2]=>NaN
 //NaN==NaN=>false
+//NumberisNaN(NaN)
+//NumberisNaN("name")
 
 let nameInBoolean = Boolean(name);
 console.log(nameInBoolean);
