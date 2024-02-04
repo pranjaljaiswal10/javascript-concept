@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const p=new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        resolve(`Promises resolve by p1`)
+       },5000)
+        
+    })
+   const p2=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve(`Promises resolve by p2`)
+    },10000)
+   })
+//    async function getData(){
+//     console.log('hi!')
+//     // debugger;
+//     const data=await  p2;
+//     console.log(`Hello There!`)
+//     //  debugger;
+//      console.log(data);
+//     const secondData=await p; 
+//     console.log('Hello There!')
+//     // debugger;
+//     console.log(secondData)
+
+//    }
+   async function getData(){
+    console.log('hi!')
+    // debugger;
+    const data=await  p;
+    console.log(`Hello There!`)
+    //  debugger;
+     console.log(data);
+    const secondData=await p2; //wait for 3 sec to resolve
+    console.log('Hello There!')
+    // debugger;
+    console.log(secondData)
+
+   }
+
+
+   getData()
+    </script>
+</body>
+</html>

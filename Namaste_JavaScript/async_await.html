@@ -7,7 +7,44 @@
 </head>
 <body>
     <script>
+        async function getData(){
+            return "Namaste Javascript"
+        }
+        const promisesObject=getData();
+        console.log(promisesObject)  //{<fulfilled>:'Promise resolved value!!'}
         
+    //Another example of promises
+    // const p=new Promise((resolve,reject)=>{
+    //     resolve(`Pranjal Jaiswal`)
+    // })
+    const p=new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        resolve(`Pranjal Jaiswal`)
+       },3000)
+        
+    })
+//     async function promisesData(){
+//         return p;
+//     }
+//     const newPromisesObject=promisesData();
+//     console.log(newPromisesObject); //{<fulfilled>:'Pranjal Jaiswal'}
+//   newPromisesObject.then(res=>console.log(res));
+
+//   //async/await
+  async function handlePromise(){
+    const data=await p;
+    console.log(p,`good morning`)
+  }
+  console.log(handlePromise());
+  
+function handleGetData(){
+    p.then(res=>console.log(res))
+    console.log("hi")
+}
+handleGetData()
+
+
+
     </script>
 </body>
 </html>
