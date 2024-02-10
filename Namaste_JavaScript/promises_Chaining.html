@@ -7,7 +7,49 @@
 </head>
 <body>
     <script>
-        
+     const cart=["shoes","paints","kurta"]
+     createOrder(cart)
+     .then(function(orderId){
+        console.log(orderId)
+        return orderId;
+     })
+     .then(function(orderId){
+        return proceedToPayment(orderId);
+     })
+     .then(function(paymentInfo){
+        console.log(paymentInfo);
+     })
+     .catch(function(err){
+        console.log(err);
+     })
+
+     function createOrder(cart) {
+        const promise = new Promise(function (resolve, reject) {
+            
+            
+            if(!validateCart(cart))
+            {
+                const err=new Error("Cart is not valid")
+             reject(err)
+            }
+            const orderId="1234" //get this data by calling the db(Assumption)
+            if(orderId)
+            {
+                resolve("1234")
+            }
+            function validateCart(cart){
+                return false;
+                
+                ;
+            }
+        });
+        return promise;
+      }
+      function proceedToPayment(cart){
+        return new Promise(function(resolve,reject){
+            resolve("Payment Successful")
+        })
+      }
     </script>
 </body>
 </html>
