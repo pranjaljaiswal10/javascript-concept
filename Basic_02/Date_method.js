@@ -1,27 +1,27 @@
 function dateMethods() {
-  const currentDate = new Date();
-  console.log("=> Current Date:", currentDate); //=> Current Date
-  console.log(myDate.toLocaleString()) //Year 20/4/2024, 8:32:10 pm
+  const myDate = new Date();
+  console.log("=> Current Date:", myDate); //=> Current Date
+  console.log(myDate.toLocaleString()) //Year DD/MM/YYYY, HH:MM:SS pm
   console.log(myDate.toUTCString()) //Sat, 20 Apr 2024 15:30:08 GMT
-  console.log(myDate.toLocaleString()) // 20/4/2024, 8:32:10 pm
   // Getting various components of the date
-  console.log("=> Date:", currentDate.getDate()); //Date
-  console.log("=> Month:", currentDate.getMonth() + 1); // Months are zero-indexed, so adding 1
+  console.log("=> Date:", myDate.getDate()); //Date
+  console.log("=>Days",myDate.getDay())
+  console.log("=> Month:", myDate.getMonth() + 1); // Months are zero-indexed, so adding 1
   //=> Month
-  console.log("=> Year:", currentDate.getFullYear()); //=> Year:
-  console.log("Hours:", currentDate.getHours()); //=> Hours:
-  console.log("=> Minutes:", currentDate.getMinutes()); //=> Minutes
-  console.log("=> Seconds:", currentDate.getSeconds()); //=> Seconds
+  console.log("=> Year:", myDate.getFullYear()); //=> Year:
+  console.log("Hours:", myDate.getHours()); //=> Hours:
+  console.log("=> Minutes:", myDate.getMinutes()); //=> Minutes
+  console.log("=> Seconds:", myDate.getSeconds()); //=> Seconds
 
   // Setting components of the date
-  currentDate.setFullYear(2022);
-  console.log("=> After setFullYear:", currentDate); //=>After setFullYear:
+  myDate.setFullYear(2022);
+  console.log("=> After setFullYear:", myDate); //=>After setFullYear:
 
-  currentDate.setMonth(5); // Setting month to June (zero-indexed) 
-  console.log("=> After setMonth:", currentDate); //=> After setMonth:
+  myDate.setMonth(5); // Setting month to June (zero-indexed) 
+  console.log("=> After setMonth:", myDate); //=> After setMonth:
 
   // Getting and setting time in milliseconds since 1970
-  console.log("=> Time in milliseconds since 1970:", currentDate.getTime()); //=> Time in milliseconds since 1970:
+  console.log("=> Time in milliseconds since 1970:", myDate.getTime()); //=> Time in milliseconds since 1970:
 
   
  //Accept format:MM/DD/YYYY or YYYY/MM/DD
