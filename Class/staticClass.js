@@ -24,4 +24,3 @@ const pranjal=new User("Pranjal")
 console.log(User.createId())
 
 const mam=new Teacher("mam","mam@gmail.com","246")
-console.log(mam.createId())

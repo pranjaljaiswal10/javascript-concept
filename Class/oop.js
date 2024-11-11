@@ -6,8 +6,8 @@ const  user={
     console.log(this.loginCount)
   }
 }
-user.getUserDetail()
-console.log(user.username)
+ user.getUserDetail()
+ console.log(user.username)
 console.log(this)
 
 
@@ -22,6 +22,6 @@ return this
 
 
 const userOne=new User("hitesh",12,true)
-const userTwo=new User("Chaicode",11,false)
+const userTwo= User("Chaicode",11,false)
 
 console.log(userTwo)

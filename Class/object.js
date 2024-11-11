@@ -14,19 +14,19 @@ function createUser(username,score){
 }
 
 createUser.prototype.increament=function(){
-    this.score++;
+    this.score++;    
 }
 
 createUser.prototype.printMe=function(){
     console.log(`price is ${this.score}`)
 }
 
-const chai=new createUser("chai",25)
-const tea=new createUser("tea",250)
-chai.increament()
+const chai=new  createUser("chai",25)
+const tea=new  createUser("tea",250)
 chai.printMe()
-
 tea.printMe()
+
+
 
 
 /*

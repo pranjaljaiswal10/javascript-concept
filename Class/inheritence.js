@@ -26,5 +26,6 @@ chai.logme();
 const masalaChai = new User("masalaChai");
 
 masalaChai.logme();
+chai.addCourse()
 
 console.log(chai instanceof User);
